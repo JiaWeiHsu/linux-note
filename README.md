@@ -1,19 +1,23 @@
 # linux_note
 
-### linux nodejs install 
+### linux nodejs install
+
 解決 apt nodejs 版本太舊　
 `curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -`
 `sudo apt-get install -y nodejs`
 
 ### save vim with sudo
+
 `:w !sudo tee %`
 
 ### list services
+
 `service --status-all`
 
 雙系統時間校正 https://www.ptt.cc/bbs/Linux/M.1504346730.A.784.html
 
 ### vscode settings
+
 prettier
 Simple React Snippets
 user settings
@@ -67,4 +71,12 @@ https://medium.com/@dd0425/lets-encrypt%E5%85%8D%E8%B2%BBssl-tls%E6%86%91%E8%AD%
 ### error: src refspec "你的遠端branch名稱" does not match any.
 `git push origin HEAD:"你的遠端branch名稱" `
 
-### BRYAN IS COOL
+### prevent nginx/mysql auto start when boot
+`sudo update-rc.d -f nginx disable`
+```
+vim /etc/init/mysql.conf
+
+Comment out the `start on`
+```
+
+
